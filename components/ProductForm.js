@@ -111,24 +111,28 @@ export default function ProductForm({
 
                 {/* Properties */}
                 {propertiesToFill.length > 0 && propertiesToFill.map(p => (
-                    <div className="flex gap-1">
-                        <div>{p.name}</div>
-                        <select 
-                            value={productProperties[p.name]}
-                            onChange={(event) => changeProductProperties(p.name, event.target.value)}>
-                            {p.values.map(v => (
-                                <option value={v}>
-                                    {v}
-                                </option>
-                            ))}
-                        </select>
+                    <div>
+                        <label>{p.name}</label>
+                        <div>
+                            <select 
+                                className="w-full"
+                                value={productProperties[p.name]}
+                                onChange={(event) => changeProductProperties(p.name, event.target.value)}>
+                                {p.values.map(v => (
+                                    <option value={v}>
+                                        {v}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        
                     </div>
                 ))}
 
                 {/* Photos */}
                 <label>Photos</label>
                 <div className="mb-2">
-                    <label className="w-24 h-24 cursor-pointer border text-center flex flex-col items-center justify-center gap-1 text-sm rounded-lg bg-gray-200 text-gray-600">
+                    <label className="w-24 h-24 cursor-pointer border bg-gray-200 text-center flex flex-col items-center justify-center gap-1 text-sm rounded-lg bg-white text-gray-600 shadow-sm">
                         <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             fill="none" 

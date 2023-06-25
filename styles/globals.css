@@ -13,7 +13,7 @@ h1 {
 }
 
 label{
-    @apply text-base;
+    @apply text-sm text-gray-600;
 }
 
 /* Primary button */
