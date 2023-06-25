@@ -110,12 +110,12 @@ export default function Categories() {
             <form onSubmit={saveCategory}>
                 <div className="flex gap-1 flex-wrap">
                     <input 
-                    
+                    className="w-full"
                     type="text" 
                     placeholder="Category name" 
                     onChange={event => setName(event.target.value)}
                     value={name} />
-                    <select onChange={(event) => setParentCategory(event.target.value)} value={parentCategory}>
+                    <select className="w-full" onChange={(event) => setParentCategory(event.target.value)} value={parentCategory}>
                         <option value=''>
                             No parent category
                         </option>
