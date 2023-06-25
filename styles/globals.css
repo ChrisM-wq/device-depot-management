@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default input styling */
+input, textarea, select{
+    @apply border-2 border-gray-200 px-2 rounded-sm py-2;
+    @apply mb-2;
+}
+
+h1 {
+    @apply text-2xl font-semibold pb-4 text-primary;
+}
+
+label{
+    @apply text-base;
+}
+
+/* Primary button */
+.btn-primary {
+    @apply bg-primary rounded-sm px-4 py-1 mt-2 text-white mt-0;
+}
+
+/* Products Table */
+table.tProducts, table.tCategories {
+    @apply w-full;
+}
+table.tProducts tr td, table.tCategories tr td{
+    @apply border-2 border-gray-200 p-1 space-x-2;
+}
+table.tProducts thead tr td, table.tCategories thead tr td{
+    @apply bg-gray-200 text-black uppercase text-sm;
+}
+table.tProducts a, table.tCategories a {
+    @apply bg-gray-200 inline-flex items-center gap-2 px-2 rounded-sm text-black;
+}
+
+.tableLink {
+    @apply bg-gray-200 inline-flex items-center gap-2 px-2 rounded-sm text-black;
+}
+  
+/* Buttons */
+.btn-default, .btn-red {
+    @apply px-4 py-1 rounded-md;
+}
+/* Delete (Red) button */
+.btn-red {
+    @apply bg-red-800 text-white;
+}
+/* Default button */
+.btn-default {
+    @apply bg-gray-300;
+}
