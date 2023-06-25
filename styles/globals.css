@@ -4,7 +4,7 @@
 
 /* Default input styling */
 input, textarea, select{
-    @apply border-2 border-gray-200 px-2 rounded-sm py-2;
+    @apply border-2 border-default px-2 rounded-sm py-2;
     @apply mb-2;
 }
 
@@ -26,17 +26,17 @@ table.tProducts, table.tCategories {
     @apply w-full;
 }
 table.tProducts tr td, table.tCategories tr td{
-    @apply border-2 border-gray-200 p-1 space-x-2;
+    @apply border-2 border-default p-1 space-x-2;
 }
 table.tProducts thead tr td, table.tCategories thead tr td{
-    @apply bg-gray-200 text-black uppercase text-sm;
+    @apply bg-default text-black uppercase text-sm;
 }
 table.tProducts a, table.tCategories a {
-    @apply bg-gray-200 inline-flex items-center gap-2 px-2 rounded-sm text-black;
+    @apply bg-default inline-flex items-center gap-2 px-2 rounded-sm text-black;
 }
 
 .tableLink {
-    @apply bg-gray-200 inline-flex items-center gap-2 px-2 rounded-sm text-black;
+    @apply bg-default inline-flex items-center gap-2 px-2 rounded-sm text-black;
 }
   
 /* Buttons */
@@ -45,9 +45,9 @@ table.tProducts a, table.tCategories a {
 }
 /* Delete (Red) button */
 .btn-red {
-    @apply bg-red-800 text-white;
+    @apply bg-errorRed rounded-sm px-4 py-1 mt-0 text-white;
 }
 /* Default button */
 .btn-default {
-    @apply bg-gray-300;
+    @apply bg-default rounded-sm px-4 py-1 mt-2 mt-0;
 }

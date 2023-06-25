@@ -15,10 +15,10 @@ export default function Profile() {
     };
 
     return (
-        <div onClick={() => setProfileMenu(!profileMenu)} className="bg-gray-200 rounded-full h-8 flex flex-col select-none hidden md:inline-flex">
+        <div onClick={() => setProfileMenu(!profileMenu)} className="bg-default rounded-full h-8 flex flex-col select-none hidden md:inline-flex">
         <div className="flex items-center space-x-2 pr-3 cursor-pointer">
             <img src={session?.user?.image} alt='' className="w-8 h-8 rounded-full"/>
-            <div className="opacity-100">{session.user.name}</div>
+            <div className="font-semibold">{session.user.name}</div>
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 fill="none" 
