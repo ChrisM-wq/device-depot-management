@@ -138,13 +138,13 @@ export default function Categories() {
                             className="mb-0"
                             value={property.name}
                             onChange={event => handlePropertyNameChange(index, property, event.target.value)}
-                            placeholder="property name (example: color)"/>
+                            placeholder="Property name (example: Color)"/>
                             <input 
                                 type="text" 
                                 className="mb-0"
                                 onChange={event => handlePropertyValuesChange(index, property, event.target.value)}
                                 value={property.values} 
-                                placeholder="values, comma separated"/>
+                                placeholder="Values, comma separated"/>
                             <button 
                                 type='button'
                                 onClick={() => removeProperty(index)} 

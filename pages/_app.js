@@ -1,8 +1,6 @@
 import { SessionProvider } from "next-auth/react"
-
 import "../styles/globals.css";
 import { AppContextProvider } from "@/components/AppContext";
-
 
 export default function App({
   Component,
