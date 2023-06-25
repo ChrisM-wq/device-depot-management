@@ -9,7 +9,7 @@ export const useAppContext = () => useContext(AppContext);
 // Context provider component
 export const AppContextProvider = ({ children }) => {
   const [sharedState, setSharedState] = useState({
-    menu: true,
+    menu: false,
   });
 
   return (
