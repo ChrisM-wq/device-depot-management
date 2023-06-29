@@ -14,6 +14,9 @@ const ProductSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Category'
     },
+    images: {
+        type: Array,
+    },
     properties: {type:Object},
 });
 

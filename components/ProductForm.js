@@ -19,6 +19,8 @@ export default function ProductForm({
     const [goToProducts, setGoToProducts] = useState(false);
     const [categories, setCategories] = useState([]);
 
+    // const [imageLink, setImageLink] = useState("");
+
     const router = useRouter();
     
     // Get the categories
@@ -131,6 +133,16 @@ export default function ProductForm({
 
                 {/* Photos */}
                 <label>Photos</label>
+
+                
+                {/* <div>
+                    <input type="text" value={imageLink} onChange={(event) => setImageLink(event.target.value)}/>
+                    <button>Add link</button>
+                </div> */}
+                
+
+
+
                 <div className="mb-2">
                     <label className="w-24 h-24 cursor-pointer border bg-gray-200 text-center flex flex-col items-center justify-center gap-1 text-sm rounded-lg bg-white text-gray-600 shadow-sm">
                         <svg 
