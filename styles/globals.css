@@ -22,16 +22,16 @@ label{
 }
 
 /* Products Table */
-table.tProducts, table.tCategories {
+table.tProducts, table.tCategories, table.tOrders {
     @apply w-full;
 }
-table.tProducts tr td, table.tCategories tr td{
+table.tProducts tr td, table.tCategories tr td, table.tOrders tr td{
     @apply border-2 border-default p-1 space-x-2;
 }
-table.tProducts thead tr td, table.tCategories thead tr td{
+table.tProducts thead tr td, table.tCategories thead tr td, table.tOrders thead tr td{
     @apply bg-default text-black uppercase text-sm;
 }
-table.tProducts a, table.tCategories a {
+table.tProducts a, table.tCategories a, table.tOrders a {
     @apply bg-default inline-flex items-center gap-2 px-2 rounded-sm text-black;
 }
 

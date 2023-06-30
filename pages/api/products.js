@@ -17,11 +17,25 @@ export default async function handle(req, res) {
     }
 
     if (method === 'POST') {
-        const { title, description, price, category, properties } = req.body;
-        const productDoc = await Product.create({
-            title, description, price, category, properties
-        })
-        res.json(productDoc)
+        const { title, description, price, category, properties, imageLink } = req.body;
+        const images = [];
+        
+        images.push("https://drive.google.com/uc?export=view&id=" + imageLink);
+        console.log(imageLink);
+
+        if (category === "") {
+            const productDoc = await Product.create({
+                title, description, price, properties, images
+            });
+            res.json(productDoc)
+        } else {
+            const productDoc = await Product.create({
+                title, description, price, category, properties, images
+            });
+            res.json(productDoc)
+        }
+        
+        
     }
 
     if (method === 'PUT') {

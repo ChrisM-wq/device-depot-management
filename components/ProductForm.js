@@ -6,7 +6,8 @@ export default function ProductForm({
     _id, 
     title: exisingTitle, 
     description: exisingDescription, 
-    price:exisingPrice, images, 
+    price:exisingPrice, 
+    images:exisingImages, 
     category:exisingCategory,
     properties: exisingProperties
 }) {
@@ -18,8 +19,7 @@ export default function ProductForm({
     const [price, setPrice] = useState(exisingPrice || '');
     const [goToProducts, setGoToProducts] = useState(false);
     const [categories, setCategories] = useState([]);
-
-    // const [imageLink, setImageLink] = useState("");
+    const [imageLink, setImageLink] = useState("");
 
     const router = useRouter();
     
@@ -38,8 +38,10 @@ export default function ProductForm({
             description, 
             price, 
             category, 
+            imageLink,
             properties: productProperties,
         };
+        console.log(data)
         if (_id) {
             await axios.put('/api/products', { _id, ...data });
         } else {
@@ -52,19 +54,22 @@ export default function ProductForm({
     if (goToProducts) router.push('/products');
 
     // Upload Image to API handler
-    async function uploadImages(event) {
-        const files = event.target?.files;
-        if (files.length > 0) {
-            const data = new FormData();
-            for (const file of files) {
-                data.append('file', file)
-            }
-            const res = await axios.post('/api/upload', data, {
-                headers: {"Content-Type": 'multipart/form-data'}
-            });
-            console.log(res.data);
-        };
-    };
+    // For AWS s3 bucket
+    // async function uploadImages(event) {
+    //     const files = event.target?.files;
+    //     if (files.length > 0) {
+    //         const data = new FormData();
+    //         for (const file of files) {
+    //             data.append('file', file)
+    //         }
+    //         const res = await axios.post('/api/upload', data, {
+    //             headers: {"Content-Type": 'multipart/form-data'}
+    //         });
+    //         console.log(res.data);
+    //     };
+    // };
+
+
 
     // Save updates to product properties
     function changeProductProperties(propertyName, value) {
@@ -135,15 +140,13 @@ export default function ProductForm({
                 <label>Photos</label>
 
                 
-                {/* <div>
+                <div>
                     <input type="text" value={imageLink} onChange={(event) => setImageLink(event.target.value)}/>
-                    <button>Add link</button>
-                </div> */}
+                </div>
                 
 
 
-
-                <div className="mb-2">
+                {/* <div className="mb-2">
                     <label className="w-24 h-24 cursor-pointer border bg-gray-200 text-center flex flex-col items-center justify-center gap-1 text-sm rounded-lg bg-white text-gray-600 shadow-sm">
                         <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -168,7 +171,7 @@ export default function ProductForm({
                     {!images?.length && (
                         <div>No photos in this product</div>
                     )}
-                </div>
+                </div> */}
 
                 {/* Description */}
                 <label htmlFor="description">Description</label>
